@@ -311,7 +311,7 @@ h4 {
     height: fit-content;
   }
   .hero .card {
-    min-height: 550px;
+    min-height: 450px;
   }
 }
 @media (max-width: 590px) {
@@ -743,6 +743,18 @@ footer .container .categories,
 footer .container .news_letter {
   flex: 1;
 }
+footer .container .news_letter .newsForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.newsForm input,
+.newsForm button {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
 footer .container .about,
 footer .container .categories {
   display: flex;
@@ -850,12 +862,12 @@ footer .container:last-child {
   color: #fff;
 }
 .dark-footer .container:last-child .mark {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 200;
   color: #fff;
 }
 .light-footer .container:last-child .mark {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 200;
   color: #13141e;
 }
@@ -989,6 +1001,7 @@ footer .container:last-child .links a svg {
   border-radius: 8px;
   margin-bottom: 40px;
 }
+
 .singleBlog .container .intro-text {
   margin-bottom: 40px;
 }
@@ -1103,7 +1116,7 @@ footer .container:last-child .links a svg {
   justify-content: flex-end;
 }
 .sidebar button:first-child {
-  background: #16a34a;
+  background: #be185d;
 }
 .sidebar button:nth-child(2) {
   background: #059669;
@@ -1115,7 +1128,7 @@ footer .container:last-child .links a svg {
   background: #6d28d9;
 }
 .sidebar button:nth-child(5) {
-  background: #be185d;
+  background: #16a34a;
 }
 .sidebar button:nth-child(6) {
   background: #facc15;
@@ -1243,6 +1256,7 @@ footer .container:last-child .links a svg {
   border-radius: 8px;
   height: 350px;
   width: fit-content;
+  object-fit: cover;
 }
 .dark-bg .create-blog .sub-para input,
 .dark-bg .create-blog .sub-para textarea {
@@ -1654,6 +1668,7 @@ footer .container:last-child .links a svg {
   color: #000;
   font-weight: 700;
   border-radius: 8px;
+  cursor: pointer;
 }
 .update-blog form .update-btn:hover {
   transition: 0.3s;

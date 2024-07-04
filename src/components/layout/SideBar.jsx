@@ -26,7 +26,7 @@ const SideBar = ({ setComponent }) => {
       );
       setIsAuthenticated(false);
       toast.success(data.message);
-      navigateTo("/");
+      navigateTo("/login");
     } catch (error) {
       toast.error(error.response.data.message);
     }
@@ -36,6 +36,7 @@ const SideBar = ({ setComponent }) => {
     navigateTo("/");
   };
   const handleComponent = (value) => {
+    setShow(!show);
     setComponent(value);
   };
   return (
@@ -52,6 +53,7 @@ const SideBar = ({ setComponent }) => {
           <p>{user.name}</p>
         </div>
         <ul>
+          <button onClick={gotoHome}>HOME</button>
           <button onClick={() => handleComponent("My Blogs")}>MY BLOGS</button>
           <button onClick={() => handleComponent("Create Blog")}>
             CREATE BLOG
@@ -60,7 +62,7 @@ const SideBar = ({ setComponent }) => {
           <button onClick={() => handleComponent("My Profile")}>
             MY PROFILE
           </button>
-          <button onClick={gotoHome}>HOME</button>
+
           <button onClick={handleLogout}>LOGOUT</button>
           <button
             onClick={() =>

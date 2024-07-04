@@ -15,9 +15,7 @@ const Navbar = () => {
     setShow(!show);
   };
 
-  const isDashboard = useLocation(
-    "https://blogspot-devapp.netlify.app/dashboard"
-  );
+  const isDashboard = useLocation("https://blogspot-dev.netlify.app/dashboard");
 
   const { mode, setMode, isAuthenticated, user, setIsAuthenticated } =
     useContext(Context);
@@ -34,7 +32,7 @@ const Navbar = () => {
       );
       setIsAuthenticated(false);
       toast.success(data.message);
-      navigateTo("/");
+      navigateTo("/login");
     } catch (error) {
       toast.error(error.response.data.message);
     }

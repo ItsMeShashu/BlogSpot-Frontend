@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../..";
 import { Navigate, useParams } from "react-router-dom";
 import axios from "axios";
-
+import toast from "react-hot-toast";
 const SingleBlog = () => {
   const { mode, user, isAuthenticated } = useContext(Context);
   const { id } = useParams();
@@ -27,6 +27,7 @@ const SingleBlog = () => {
     getSingleBlog();
   }, []);
   if (!isAuthenticated) {
+    toast.error("Please login to Read Blogs!");
     return <Navigate to={"/"} />;
   }
   return (

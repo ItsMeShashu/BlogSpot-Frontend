@@ -11,12 +11,12 @@ const TrendingBlogs = () => {
     extraLarge: {
       breakpoint: { max: 3000, min: 1324 },
       items: 4,
-      slidesToSlide: 4, // optional, default to 1.
+      slidesToSlide: 2, // optional, default to 1.
     },
     large: {
       breakpoint: { max: 1324, min: 1005 },
       items: 3,
-      slidesToSlide: 3, // optional, default to 1.
+      slidesToSlide: 2, // optional, default to 1.
     },
     medium: {
       breakpoint: { max: 1005, min: 700 },

@@ -22,7 +22,7 @@ const PopularAuthors = () => {
       <h3>Popular Authors</h3>
       <div className="container">
         {authors && authors.length > 0 ? (
-          authors.slice(0, 4).map((element) => {
+          authors.slice(0, 5).map((element) => {
             return (
               <div className="card" key={element._id}>
                 <img src={element.avatar.url} alt="author" />

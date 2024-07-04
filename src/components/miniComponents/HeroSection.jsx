@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section className="hero">
       {blogs && blogs.length > 0 ? (
-        blogs.slice(1, 3).map((element) => {
+        blogs.slice(3, 5).map((element) => {
           return (
             <Link
               to={`/blog/${element._id}`}
